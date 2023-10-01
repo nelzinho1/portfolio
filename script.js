@@ -16,13 +16,19 @@ $(document).ready(function(){
      });
 
      var typed = new Typed(".typing", {
-         strings:["", "Analista de suporte pleno| AWS | AZURE|", "Programador", "Freelancer"],
+         strings:["", "SRE | Analista de suporte | AWS | AZURE|", "Programador", "Freelancer"],
          typeSpeed:100,
          backSpeed:60,
          loop:true
      });
      var typed = new Typed(".typing-2", {
-        strings:["", "Programador", "Analista de suporte pleno| AWS | AZURE|", "Freelancer"],
+        strings:["DevOps", "Programador", "Analista de suporte | AWS | AZURE|", "Freelancer"],
+        typeSpeed:100,
+        backSpeed:60,
+        loop:true
+    });
+    var typed = new Typed(".typing-3", {
+        strings:["", "SRE", "DevOPS"],
         typeSpeed:100,
         backSpeed:60,
         loop:true
