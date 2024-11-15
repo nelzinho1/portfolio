@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap');
-*{
+
+/* Reset e Box-sizing */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-.max-width{
+
+/* Max-width */
+.max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
 }
-/*  navbar   inicio*/
+
+/* Navbar */
 .navbar{
     position: fixed;
     width: 100%;
@@ -105,11 +111,13 @@ html{
 }
 
 /*  Menu  Mobile  */
-.menu-btn{
+.menu-btn {
     color: #fff;
     font-size: 26px;
     cursor: pointer;
-    display: none;
+    display: none; /* Será exibido apenas em telas menores */
+    position: relative; /* Adicione isso */
+    z-index: 1001; /* Adicione um z-index alto para garantir que o ícone apareça por cima */
 }
 .scroll-up-btn{
     position: fixed;
@@ -244,7 +252,7 @@ section .title::after{
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
-    background: #222;
+    background: #111;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
@@ -456,35 +464,27 @@ footer span a:hover{
 }
 
 
-/*  responsivo  */
-@media (max-width: 1300px){
-    .navbar .max-width{
+/* Responsividade */
+@media (max-width: 1300px) {
+    .navbar .max-width {
         margin-left: 0;
     }
 }
-@media (max-width: 1104px){
-    .about .about-content .left img{
-        width: 350px;
-        height: 350px;
-    }
-}
-@media (max-width: 991px){
-    .navbar .max-width{
-        padding: 0 50px;
-    }
-}
-@media (max-width: 947px){
-    .max-width{
+
+@media (max-width: 947px) {
+    .max-width {
         max-width: 800px;
         padding: 0 50px;
     }
-    .menu-btn{
+
+    .navbar .menu-btn {
         display: block;
-        z-index: 999;
+        
     }
-    .navbar .menu{
+
+    .navbar .menu {
         position: fixed;
-        width: 100%;
+        width: 60%;
         height: 100vh;
         left: -100%;
         top: 0;
@@ -492,71 +492,90 @@ footer span a:hover{
         padding-top: 80px;
         text-align: center;
         transition: all 0.3s ease;
+        
     }
-    .navbar .menu.active{
+
+    .navbar .menu.active {
         left: 0;
     }
-    .navbar .menu li{
+
+    .navbar .menu li {
         display: block;
     }
-    .navbar .menu li a{
+
+    .navbar .menu li a {
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
     }
-    .home .home-content .text-2{
+
+    .home .home-content .text-2 {
         font-size: 70px;
     }
-    .home .home-content .text-3{
+
+    .home .home-content .text-3 {
         font-size: 35px;
     }
-    .home .home-content a{
+
+    .home .home-content a {
         font-size: 23px;
         padding: 10px 30px;
     }
-    .about .about-content .column{
+
+    .about .about-content .column {
         width: 50%;
     }
-    .about .about-content .left{
+
+    .about .about-content .left {
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
     }
-    .about .about-content .right{
+
+    .about .about-content .right {
         flex: 100%;
     }
+
     .services .serv-content .card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+
     .skills .skills-content .column,
-    .contact .contact-content .column{
+    .contact .contact-content .column {
         width: 100%;
         margin-bottom: 35px;
     }
-    footer{
+
+    footer {
         margin-top: 15px;
     }
 }
-@media (max-width: 690px){
-    .home .home-content .text-2{
+
+@media (max-width: 690px) {
+    .home .home-content .text-2 {
         font-size: 60px;
     }
-    .home .home-content .text-3{
+
+    .home .home-content .text-3 {
         font-size: 32px;
     }
-    .home .home-content a{
+
+    .home .home-content a {
         font-size: 20px;
     }
+
     .services .serv-content .card {
-        width:100%;
+        width: 100%;
     }
 }
-@media (max-width: 500px){
-    .home .home-content .text-2{
+
+@media (max-width: 500px) {
+    .home .home-content .text-2 {
         font-size: 50px;
     }
-    .home .home-content .text-3{
+
+    .home .home-content .text-3 {
         font-size: 27px;
     }
 }
